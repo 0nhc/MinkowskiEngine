@@ -174,6 +174,7 @@ if sys.platform == "win32":
         CC_FLAGS += ["/sdl", "/permissive-"]
 else:
     CC_FLAGS += ["-fopenmp"]
+    NVCC_FLAGS += ["-Xcompiler", "-fopenmp"]
 
 if "darwin" in platform:
     CC_FLAGS += ["-stdlib=libc++", "-std=c++17"]
